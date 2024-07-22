@@ -1,10 +1,10 @@
 import React from "react";
-import MainDashboard from "./components/mainDashboard/MainDashboard.jsx";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <MainDashboard />
+      <Outlet />
     </div>
   );
 };

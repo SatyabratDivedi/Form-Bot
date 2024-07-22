@@ -14,8 +14,11 @@ import embedImg2 from "./../../assets/embedImg2.png";
 import { featureDetails } from "./featureDetails.js";
 import { teamImg } from "./featureDetails.js";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const MainDashboard = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={style.main}>
@@ -24,10 +27,14 @@ const MainDashboard = () => {
           <div className={style.left}>
             <img src={icon} alt='' />
             <div>FormBot</div>
-          </div>
+          </div> 
           <div className={style.right}>
-            <button className={style.signInBtn}>Sign in</button>
-            <button className={style.createFormBtn}>Create a FormBot</button>
+            <button onClick={() => navigate("/login")} className={style.signInBtn}>
+              Sign in
+            </button>
+            <button onClick={() => navigate("/folder")} className={style.createFormBtn}>
+              Create a FormBot
+            </button>
           </div>
         </header>
         {/* Hero Section */}
@@ -185,11 +192,10 @@ const MainDashboard = () => {
           </div>
         </div>
         {/* user Engagement section */}
-
         <div className={style.engagementSection}>
           <img src={rotateImg1} alt='' />
           <h3>
-            Improve conversion and user engagement <br /> with FormBots{" "}
+            Improve conversion and user engagement <br /> with FormBots
           </h3>
           <button>Create a From</button>
           <div className={style.freePlanTxt}>No trial. Generous free plan.</div>
@@ -197,6 +203,7 @@ const MainDashboard = () => {
         </div>
 
         {/* footer section */}
+
         <footer className={style.footer}>
           <div className={style.footerLeft}>
             <p>
