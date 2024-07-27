@@ -27,12 +27,12 @@ const MainDashboard = () => {
           <div className={style.left}>
             <img src={icon} alt='' />
             <div>FormBot</div>
-          </div> 
+          </div>
           <div className={style.right}>
             <button onClick={() => navigate("/login")} className={style.signInBtn}>
               Sign in
             </button>
-            <button onClick={() => navigate("/folder")} className={style.createFormBtn}>
+            <button onClick={() => navigate("/folder/main")} className={style.createFormBtn}>
               Create a FormBot
             </button>
           </div>
